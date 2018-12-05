@@ -1,0 +1,52 @@
+div{
+    padding-top: 20px;
+    padding-right: 60px;
+    padding-bottom: 10px;
+    padding-left: 60px;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #676467;
+  flex-direction: row;
+}
+
+.flex-container > div {
+  width: 10px;
+  margin: 10px;
+  text-align: center;
+  line-height: 1px;
+  font-size: 10px;
+  background-color:#F1E4F1;
+
+}
+
+.col-md-10{
+  text-align: center;
+
+}
+
+.search{
+  text-align: center;
+
+}
+
+.Email(){
+  text-decoration: none;
+      padding: 10px;
+      font-weight: 600;
+      font-size: 20px;
+      color: #ffffff;
+      background-color: #1883ba;
+      border-radius: 6px;
+      border: 2px solid #0016b0;
+
+}
+
+body{
+  background-image: url(../imagenes/img1.jpeg);
+  background-size: 100%;
+  background-repeat:repeat-x;
+  background-attachment: fixed;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contactos</title>
+    <link href="css/css_contacto.css"
+          rel="stylesheet" type="text/css">
+    <link href="css/fontello.css"
+          rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+
+    <header>
+      <div class="flex-container">
+        <div class ="icon-menu"></div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+      </div>
+    </header>
+
+    <nav>
+       <div class="col-md-10">
+         <h2> Soporte </h2>
+         <h2> ¿Necesita ayuda?</h2>
+         <form action="" class="search">
+	          <input id="submit" value="" type="submit">
+	           <label for="submit" class="submit"></label>
+
+
+	            <a href="javascript: void(0)" class="icon"></a>
+	            <input type="search" name="Search" id="search" placeholder="Search"/>
+              </form>
+              <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    </nav>
+  <section>
+
+
+     <h2> Contactar Mediante</h2>
+    <div class="flex-container">  <script>
+        function Email(){
+          em = prompt ("Por favor, Introduzca su email.");
+          alert(" Le enviaremos información al email :"+em);
+        }
+
+        function Telefono(){
+          numero= prompt ("Por favor, Introduzca su número de Telefono para contactar con usted");
+          alert("Le llamaremos al "+numero);
+        }
+
+        function online(){
+          nombre = prompt ("Por favor, Introduzca su nombre.");
+          alert(" En breve sera atendido por un comercial"+nombre);
+        }
+      </script>
+      < Button="boton_personalizado">Soy un botón</a>
+    <div><Button onclick="Email()"> Email</Button></div>
+    <div><Button onclick="Telefono()"> Telefono</Button></div>
+    <div><Button onclick="online()"> Online</Button></div>
+
+  </section>
+</body>
+</html>
