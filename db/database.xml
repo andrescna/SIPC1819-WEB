@@ -1,0 +1,24 @@
+<?xml version="1.0" ?> 
+<?xml-stylesheet type="text/xsl" href="database.xsl" ?>
+<DATABASE STORE="Biblioteca de videojuegos"> 
+ <VIDEOGAME> 
+  <NAME>Videojuegoacción</NAME> 
+  <DESCRIPTION>Un videojuego de acción y eso</DESCRIPTION> 
+  <PRICE>19.90</PRICE> 
+ </VIDEOGAME> 
+ <VIDEOGAME> 
+  <NAME>Videojuegopuzle</NAME> 
+  <DESCRIPTION>Videojuego de puzles variados</DESCRIPTION> 
+  <PRICE>4.99</PRICE> 
+ </VIDEOGAME> 
+ <VIDEOGAME> 
+  <NAME>Videojuegoterror</NAME> 
+  <DESCRIPTION>Videojuego de terror</DESCRIPTION> 
+  <PRICE>13.95</PRICE> 
+ </VIDEOGAME>
+ <VIDEOGAME> 
+  <NAME>VideojuegoRPG</NAME> 
+  <DESCRIPTION>RPG generico</DESCRIPTION> 
+  <PRICE>12.26</PRICE> 
+ </VIDEOGAME>  
+</DATABASE>
