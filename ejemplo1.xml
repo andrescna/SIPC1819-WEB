@@ -3,7 +3,7 @@
 <TIENDA Clase=" 1 ">
  <JUEGO>
   <NOMBRE>Fifa 19</NOMBRE>
-  <IMAGEN>imagenes/2.jpeg</IMAGEN>
+  <IMAGEN>imagenes/fifa.jpeg</IMAGEN>
   <ESTILO>Deporte</ESTILO>
   <PLATAFORMAS>PS4,XBOX</PLATAFORMAS>
   <PRECIO>47.80</PRECIO>
@@ -11,7 +11,7 @@
 </JUEGO>
 <JUEGO>
  <NOMBRE>Fornite</NOMBRE>
- <IMAGEN>imagenes/2.jpeg</IMAGEN>
+ <IMAGEN>imagenes/fornite.jpeg</IMAGEN>
  <ESTILO>Entretenimiento</ESTILO>
  <PLATAFORMAS>PS4,XBOX,PC</PLATAFORMAS>
  <PRECIO>15.00</PRECIO>
@@ -20,7 +20,7 @@
 
 <JUEGO>
  <NOMBRE>Formula 1</NOMBRE>
- <IMAGEN>imagenes/2.jpeg</IMAGEN>
+ <IMAGEN>imagenes/f1.jpeg</IMAGEN>
  <ESTILO>Deporte</ESTILO>
  <PLATAFORMAS>PS4</PLATAFORMAS>
  <PRECIO>35.89</PRECIO>
@@ -29,7 +29,7 @@
 <JUEGO>
 
  <NOMBRE>Call of Duty</NOMBRE>
- <IMAGEN>imagenes/2.jpeg</IMAGEN>
+ <IMAGEN>imagenes/cod.jpeg</IMAGEN>
  <ESTILO>Acción</ESTILO>
  <PLATAFORMAS>PS4,PC,XBOX</PLATAFORMAS>
  <PRECIO>46.75</PRECIO>
@@ -38,7 +38,7 @@
 
 <JUEGO>
  <NOMBRE>Buzz</NOMBRE>
- <IMAGEN>imagenes/2.jpeg</IMAGEN>
+ <IMAGEN>imagenes/buzz.jpeg</IMAGEN>
  <ESTILO>Familiar</ESTILO>
  <PLATAFORMAS>PS4,Nintendo</PLATAFORMAS>
  <PRECIO>24.90</PRECIO>
@@ -47,7 +47,7 @@
 
 <JUEGO>
  <NOMBRE>Minecraft</NOMBRE>
- <IMAGEN>imagenes/2.jpeg</IMAGEN>
+ <IMAGEN>imagenes/minecraft.jpeg</IMAGEN>
  <ESTILO>Arcade</ESTILO>
  <PLATAFORMAS>PS4,XBOX</PLATAFORMAS>
  <PRECIO>23.80</PRECIO>
@@ -56,7 +56,7 @@
 
 <JUEGO>
 <NOMBRE>Pro evolution soccer</NOMBRE>
-<IMAGEN>imagenes/2.jpeg</IMAGEN>
+<IMAGEN>imagenes/pro.jpeg</IMAGEN>
 <ESTILO>Deporte</ESTILO>
 <PLATAFORMAS>PS4,XBOX,PC</PLATAFORMAS>
 <PRECIO>33.80</PRECIO>
@@ -65,7 +65,7 @@
 
 <JUEGO>
 <NOMBRE>Has sido tú</NOMBRE>
-<IMAGEN>imagenes/2.jpeg</IMAGEN>
+<IMAGEN>imagenes/hst.jpeg</IMAGEN>
 <ESTILO>Familiar</ESTILO>
 <PLATAFORMAS>PS4</PLATAFORMAS>
 <PRECIO>21.40</PRECIO>
@@ -75,7 +75,7 @@
 <JUEGO>
 <NOMBRE>LOL</NOMBRE>
 <ESTILO>Estrategia</ESTILO>
-<IMAGEN>imagenes/2.jpeg</IMAGEN>
+<IMAGEN>imagenes/lol.jpeg</IMAGEN>
 <PLATAFORMAS>PC</PLATAFORMAS>
 <PRECIO>12.80</PRECIO>
 <FECHA_LANZ>Ya disponible</FECHA_LANZ>
@@ -83,7 +83,7 @@
 
 <JUEGO>
 <NOMBRE>Clash of Clan</NOMBRE>
-<IMAGEN>imagenes/2.jpeg</IMAGEN>
+<IMAGEN>imagenes/coc.jpeg</IMAGEN>
 <ESTILO>Estrategia</ESTILO>
 <PLATAFORMAS>PC</PLATAFORMAS>
 <PRECIO>5.80</PRECIO>
@@ -92,7 +92,7 @@
 
 <JUEGO>
 <NOMBRE>OT 2017</NOMBRE>
-<IMAGEN>imagenes/2.jpeg</IMAGEN>
+<IMAGEN>imagenes/ot.jpeg</IMAGEN>
 <ESTILO>Familiar</ESTILO>
 <PLATAFORMAS>PS4,XBOX</PLATAFORMAS>
 <PRECIO>30.80</PRECIO>
@@ -101,7 +101,7 @@
 
 <JUEGO>
 <NOMBRE>God of War</NOMBRE>
-<IMAGEN>imagenes/2.jpeg</IMAGEN>
+<IMAGEN>imagenes/gow.jpeg</IMAGEN>
 <ESTILO>Deporte</ESTILO>
 <PLATAFORMAS>PS4,XBOX</PLATAFORMAS>
 <PRECIO>32.80</PRECIO>
