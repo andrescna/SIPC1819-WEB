@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Argentum Sans';
+    src: url('font/ArgentumSans-ExtraBold.eot');
+    src: url('font/ArgentumSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('font/ArgentumSans-ExtraBold.woff2') format('woff2'),
+        url('font/ArgentumSans-ExtraBold.woff') format('woff'),
+        url('font/ArgentumSans-ExtraBold.ttf') format('truetype'),
+        url('font/ArgentumSans-ExtraBold.svg#ArgentumSans-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+

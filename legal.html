@@ -7,7 +7,7 @@
     <meta name="keywords" content="videojuegos, ofertas, barato, compraventa, seminuevos, Sony, Nintendo, Microsoft, Playstatios, Switch, Wii, Xbox, Tenerife, La Laguna"/>
     <meta name="description" content="GameVideo S.L., tu tienda de compraventa de videojuegos en La Laguna, Tenerife. Con más de 20 años de experiencia, disponemos de las últimas novedades en videojuegos y videoconsolas a los mejores precios, además de todo el merchandising de tus franquicias favoritas."/>
 
-    <title>GameVideo - Juegos, y más | Contacto</title>
+    <title>GameVideo - Juegos, y más | Política de privacidad</title>
 
     <link rel="icon" href="img/favicon.ico?v=2" />
     <link rel="apple-touch-icon-precomposed" href="img/favicon-152.png">
@@ -60,7 +60,29 @@
 
 </head>
 
+
 <body>
+    <!-- Modal de autenticacion -->     <!-- TO-DO: HAY QUE VER SI ESTO SE SACA O NO -->
+    <div id="login" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Registrese para acceder a las funciones de nuestra app</h4>
+          </div>
+          <div class="modal-body">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
         <a class="navbar-brand" href="index.html">GameVideo</a>
@@ -96,53 +118,15 @@
         </nav>
     </header>
 
-    <!--   TO-DO: PULIR ESTO  -->
     <main>
-    <div  class="row">
-       <div class="col-md-12">
-         <h2 class="text-center"> Soporte </h2>
-         <h2 class="text-center"> ¿Necesita ayuda?</h2>
-          <form action="" class="search">
-	          <input id="submit" value="" type="submit">
-	           <label for="submit" class="submit"></label>
-	            <a href="javascript: void(0)" class="icon"></a>
-	          <input type="search" name="Search" id="search" placeholder="Search"/>
-          </form>
-          </div>
-        </div>
+
+        <!--  TO-DO: METER AQUI EL TEXTO LEGAL Y POLITICA DE PRIVACIDAD  -->
+
+
     </main>
 
-    <div>
-    </div>
-
-
-    <section class="flex-container col-md-12 col-sm-12 col-xs-12">
-        <div>
-        <h2> Contactar Mediante</h2>
-        </div>
-        <div class="flex-container col-md-12 col-sm-12 col-xs-12">  <script>
-        function Email(){
-          em = prompt ("Por favor, Introduzca su email.");
-          alert(" Le enviaremos información al email :"+em);
-        }
-
-        function Telefono(){
-          numero= prompt ("Por favor, Introduzca su número de Telefono para contactar con usted");
-          alert("Le llamaremos al "+numero);
-        }
-
-        function online(){
-          nombre = prompt ("Por favor, Introduzca su nombre.");
-          alert(" En breve sera atendido por un comercial"+nombre);
-        }</script>
-        <div><Button onclick="Email()" class ="Button" > Email</Button></div>
-        <div><Button onclick="Telefono()" class ="Button"> Telefono</Button></div>
-        <div><Button onclick="online()"  class ="Button"> Online</Button></div>
-    </section>
-
-
     <footer class="main-footer">
-        <div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-3 main-footer-container">
                 <ul>
@@ -185,7 +169,8 @@
         <div class="row">
             <div class="col-md-12 mycopyright">© 2019 GameVideo S.L.&nbsp;<a target="blank" href="legal.html">Política de privacidad</a></div>
         </div>
-        </div>
+    </div>
+
     </footer>
 
 </body>
