@@ -1,28 +1,30 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type="text/xsl" href="database.xsl"?>
-<TIENDA Clase=" 1 ">
+
+<TIENDA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:noNamespaceSchemaLocation='database.xsd'>
 
     <JUEGO>
-        <NOMBRE>Fifa 19</NOMBRE>
-        <IMAGEN>imagenes/fifa.jpeg</IMAGEN>
+        <NOMBRE id="01">Fifa 19</NOMBRE>
+        <IMAGEN>img/games/01.jpg</IMAGEN>
         <GENERO>Deporte</GENERO>
-        <PLATAFORMAS>PS4,XBOX</PLATAFORMAS>
+        <PLATAFORMAS>PS4, XBOX</PLATAFORMAS>
         <PRECIO>47.80</PRECIO>
         <FECHA_LANZ>Ya disponible</FECHA_LANZ>
     </JUEGO>
 
     <JUEGO>
-        <NOMBRE>Fornite</NOMBRE>
-        <IMAGEN>imagenes/fornite.jpeg</IMAGEN>
+        <NOMBRE id="02">Fornite</NOMBRE>
+        <IMAGEN>img/games/02.jpg</IMAGEN>
         <GENERO>Entretenimiento</GENERO>
-        <PLATAFORMAS>PS4,XBOX,PC</PLATAFORMAS>
+        <PLATAFORMAS>PS4, XBOX, PC</PLATAFORMAS>
         <PRECIO>15.00</PRECIO>
         <FECHA_LANZ>Ya disponible</FECHA_LANZ>
     </JUEGO>
 
     <JUEGO>
-        <NOMBRE>Formula 1</NOMBRE>
-        <IMAGEN>imagenes/f1.jpeg</IMAGEN>
+        <NOMBRE id="03">F1 2018</NOMBRE>
+        <IMAGEN>img/games/03.jpg</IMAGEN>
         <GENERO>Deporte</GENERO>
         <PLATAFORMAS>PS4</PLATAFORMAS>
         <PRECIO>35.89</PRECIO>
@@ -30,8 +32,8 @@
     </JUEGO>
 
     <JUEGO>
-        <NOMBRE>Call of Duty</NOMBRE>
-        <IMAGEN>imagenes/cod.jpeg</IMAGEN>
+        <NOMBRE id="04">Call of Duty Black Ops 4</NOMBRE>
+        <IMAGEN>img/games/04.jpg</IMAGEN>
         <GENERO>Acción</GENERO>
         <PLATAFORMAS>PS4,PC,XBOX</PLATAFORMAS>
         <PRECIO>46.75</PRECIO>
@@ -39,35 +41,35 @@
     </JUEGO>
 
     <JUEGO>
-        <NOMBRE>Buzz</NOMBRE>
-        <IMAGEN>imagenes/buzz.jpeg</IMAGEN>
+        <NOMBRE id="05">Saber es poder</NOMBRE>
+        <IMAGEN>img/games/05.jpg</IMAGEN>
         <GENERO>Familiar</GENERO>
-        <PLATAFORMAS>PS4,Nintendo</PLATAFORMAS>
+        <PLATAFORMAS>PS4, Switch</PLATAFORMAS>
         <PRECIO>24.90</PRECIO>
         <FECHA_LANZ>15/1/2019</FECHA_LANZ>
     </JUEGO>
 
     <JUEGO>
-        <NOMBRE>Minecraft</NOMBRE>
-        <IMAGEN>imagenes/minecraft.jpeg</IMAGEN>
+        <NOMBRE id="06">Minecraft</NOMBRE>
+        <IMAGEN>img/games/06.jpg</IMAGEN>
         <GENERO>Arcade</GENERO>
-        <PLATAFORMAS>PS4,XBOX</PLATAFORMAS>
+        <PLATAFORMAS>PS4, XBOX</PLATAFORMAS>
         <PRECIO>23.80</PRECIO>
         <FECHA_LANZ>12/3/2019</FECHA_LANZ>
     </JUEGO>
 
     <JUEGO>
-        <NOMBRE>Pro evolution soccer</NOMBRE>
-        <IMAGEN>imagenes/pro.jpeg</IMAGEN>
+        <NOMBRE id="07">PES 2019</NOMBRE>
+        <IMAGEN>img/games/07.jpg</IMAGEN>
         <GENERO>Deporte</GENERO>
-        <PLATAFORMAS>PS4,XBOX,PC</PLATAFORMAS>
+        <PLATAFORMAS>PS4, XBOX, PC</PLATAFORMAS>
         <PRECIO>33.80</PRECIO>
         <FECHA_LANZ>Ya disponible</FECHA_LANZ>
     </JUEGO>
 
     <JUEGO>
-        <NOMBRE>Has sido tú</NOMBRE>
-        <IMAGEN>imagenes/hst.jpeg</IMAGEN>
+        <NOMBRE id="08">Has sido tú</NOMBRE>
+        <IMAGEN>img/games/08.jpg</IMAGEN>
         <GENERO>Familiar</GENERO>
         <PLATAFORMAS>PS4</PLATAFORMAS>
         <PRECIO>21.40</PRECIO>
@@ -75,17 +77,17 @@
     </JUEGO>
 
     <JUEGO>
-        <NOMBRE>LOL</NOMBRE>
+        <NOMBRE id="09">League Of Legends</NOMBRE>
+        <IMAGEN>img/games/09.jpg</IMAGEN>
         <GENERO>Estrategia</GENERO>
-        <IMAGEN>imagenes/lol.jpeg</IMAGEN>
         <PLATAFORMAS>PC</PLATAFORMAS>
         <PRECIO>12.80</PRECIO>
         <FECHA_LANZ>Ya disponible</FECHA_LANZ>
     </JUEGO>
 
     <JUEGO>
-        <NOMBRE>Clash of Clan</NOMBRE>
-        <IMAGEN>imagenes/coc.jpeg</IMAGEN>
+        <NOMBRE id="10">Clash of Clans</NOMBRE>
+        <IMAGEN>img/games/10.jpg</IMAGEN>
         <GENERO>Estrategia</GENERO>
         <PLATAFORMAS>PC</PLATAFORMAS>
         <PRECIO>5.80</PRECIO>
@@ -93,8 +95,8 @@
     </JUEGO>
 
     <JUEGO>
-        <NOMBRE>OT 2017</NOMBRE>
-        <IMAGEN>imagenes/ot.jpeg</IMAGEN>
+        <NOMBRE id="11">OT 2017</NOMBRE>
+        <IMAGEN>img/games/11.jpg</IMAGEN>
         <GENERO>Familiar</GENERO>
         <PLATAFORMAS>PS4,XBOX</PLATAFORMAS>
         <PRECIO>30.80</PRECIO>
@@ -102,12 +104,12 @@
     </JUEGO>
 
     <JUEGO>
-        <NOMBRE>God of War</NOMBRE>
-        <IMAGEN>imagenes/gow.jpeg</IMAGEN>
+        <NOMBRE id="12">God of War</NOMBRE>
+        <IMAGEN>img/games/12.jpg</IMAGEN>
         <GENERO>Deporte</GENERO>
         <PLATAFORMAS>PS4,XBOX</PLATAFORMAS>
         <PRECIO>32.80</PRECIO>
-        <FECHA_LANZ>12/3/2019</FECHA_LANZ>
+        <FECHA_LANZ>14/3/2019</FECHA_LANZ>
     </JUEGO>
 
 </TIENDA>

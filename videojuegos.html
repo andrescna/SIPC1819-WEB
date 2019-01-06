@@ -1,201 +1,203 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
-    <title>videojuegos</title>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <head>  
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+        <meta name="author" content="Andrés Concepción Afonso, Brian Samir Santamaría Valero">
+        <meta name="keywords" content="videojuegos, ofertas, barato, compraventa, seminuevos, Sony, Nintendo, Microsoft, Playstatios, Switch, Wii, Xbox, Tenerife, La Laguna"/>
+        <meta name="description" content="GameVideo S.L., tu tienda de compraventa de videojuegos en La Laguna, Tenerife. Con más de 20 años de experiencia, disponemos de las últimas novedades en videojuegos y videoconsolas a los mejores precios, además de todo el merchandising de tus franquicias favoritas."/>
+    
+        <title>GameVideo - Juegos, y más | Inicio</title>
+    
+        <link rel="icon" href="img/favicon.ico?v=2" />
+        <link rel="apple-touch-icon-precomposed" href="img/favicon-152.png">
+        <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+    
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/font.css" rel="stylesheet" type="text/css">
+        <!--<link href="css/fontello.css" rel="stylesheet" type="text/css">-->
+    
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+        <!--<script>
+        // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyAkuI1DwPN2ys4FkeW-8So1J5iH-Y0NY0A",
+                authDomain: "login-web-c89d9.firebaseapp.com",
+                databaseURL: "https://login-web-c89d9.firebaseio.com",
+                projectId: "login-web-c89d9",
+                storageBucket: "",
+                messagingSenderId: "66433820679"
+            };
+            firebase.initializeApp(config);
+    
+            var email= "brianftete@hotmail.com";
+            var password= "Brianftete1998";
+    
+            firebase.auth().createUserWithEmailAndPassword(email ,password).catch(function(error) {
+                if (error){
+                alert(error);
+                }else {
+                alert("Tu usuario se ha registrado correctamente");
+                }
+            });
+    
+            var email= "brianftete@gmail.com";
+            var password= "ftete98";
+            firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+                if (error){
+                alert(error);
+                }else {
+                alert("Tu usuario ha iniciado sesion correctamente");
+            }
+            });</script>-->
+            
+            <script src="js/XMLDisplay.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <link href="css/css_videojuegos.css"
-          rel="stylesheet" type="text/css">
-    <link href="css/fontello.css"
-          rel="stylesheet" type="text/css">
-  </head>
+    </head>
+    
+    
+    <body onload="displayResult()">
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+    
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal test</h4>
+              </div>
+              <div class="modal-body">
+                <p>Texto modal</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>  
+    
+          </div>
+        </div>
+    
+    <!-- Modal de autenticacion -->
+        <div id="login" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+    
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Registrese para acceder a las funciones de nuestra app</h4>
+              </div>
+              <div class="modal-body">
+    
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+    
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+            <a class="navbar-brand" href="index.html">GameVideo</a>
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarvideojuegos" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarvideojuegos">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="videojuegos.html">Videojuegos<span class="sr-only">(actual)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Zona de Socios</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a class="dropdown-item"  data-toggle="modal" data-target="#login">Iniciar sesion</a><li>
+                            <li><a class="dropdown-item" href="registrate.html">Regístrate</a><li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Introduce nombre, tipo, etc..." aria-label="Buscar">
+                    <button class="btn btn-outline-success my-2 my-sm-0"  type="submit">Buscar</button>
+                </form>
+            </div>
+            </nav>
+        </header>
+    
 
+    <main>
+        <div class="row">
+            <div class="col-md-2 col-sm-2 col-xs-3"></div>
+            <div class="col-md-8 col-sm-8" id="listado" />
+            <div class="col-md-2 col-sm-2"></div>  
+        </div>
+        
 
-<body>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
-<a class="navbar-brand" href="contacto.html">Game</a>
+    <footer class="main-footer">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-4 col-sm-4 main-footer-container">
+                      <ul>
+                          <li class="brand">GameVideo</li>
+                          <li><p>	C/ Trinidad 1<br>
+                          38200 San Cristóbal de La Laguna<br>
+                          Tenerife<br>
+                          922202224<br><br>
+                          Lun-Vie 10:00-21:00<br>
+                          Sáb 10:00-14:00</p></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-3 col-sm-3 main-footer-container">
+                      <ul class="my-footer-links">
+                          <li class="title">Servicios</li><li class="service-link"><a href="videojuegos.html">Videojuegos</a></li><li class="service-link"><a href="socios.html">Zona Socios</a></li><li class="service-link"><a href="contacto.html">Contacto</a></li></ul>
+                          </div>
+                  <div class="col-md-4 col-sm-4 main-footer-container social">
+                      <li class="title">Síguenos</li>
+      
+                      <a target="_blank" href="https://www.facebook.com/GameVideoSL" class="link-fb">
+                          <i class="fa fa-facebook">
+                          </i>
+                      </a>
+                      <a target="_blank" href="https://twitter.com/gamevideoSL" class="link-tw">
+                          <i class="fa fa-twitter">
+                          </i>
+                      </a>
+                      <a target="_blank" href="https://www.pinterest.com/company/GameVideo" class="link-pi">
+                          <i class="fa fa-pinterest">
+                          </i>
+                      </a>
+                      <a target="_blank" href="https://plus.google.com/" class="link-yo">
+                          <i class="fa fa-google-plus">
+                          </i>
+                      </a>
+                  </div>
+                  <div class="col-md-1 col-sm-1">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-12 mycopyright">© 2019 GameVideo S.L.&nbsp;<a target="blank" href="legal.html">Política de privacidad</a></div>
+              </div>
+          </div>
+      
+          </footer>
+        </main>
 
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarvideojuegos" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-
-<div class="collapse navbar-collapse" id="navbarvideojuegos">
-<ul class="navbar-nav mr-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="videojuegos.html">Videojuegos</a>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Unete ya!!
-    </a>
-    <ul class="dropdown-menu" role="menu">
-      <li><a class="dropdown-item" href="log.html">Iniciar sesion</a><li>
-      <li><a class="dropdown-item" href="registrate.html">Registrate</a><li>
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="contacto.html">Contacto</a>
-  </li>
-</ul>
-<form class="form-inline my-2 my-lg-0">
-  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-  <button class="btn btn-outline-success my-2 my-sm-0"  type="submit">Search</button>
-</form>
-</div>
-</nav>
-</header>
-
-<main>
-  <TABLE>
-  <B>Juegos de 2019</B>
-  <BR>
-  <BR>
-  <img class="flex-container col-md-3 col-sm-3 col-xs-3" src="imagenes/lol.jpeg"><TR>
-  <TD><B>LOL</B>
-  el precio es:
-  <B>12.80</B>
-  ,Valido para :
-  <B>PC</B></TD><TD>
-    .La categoria a la que pertenece es :
-    <B>Estrategia</B></TD>
-  <BR>
-  </TR>
-  <img class="flex-container col-md-3 col-sm-3 col-xs-3" src="imagenes/fornite.jpeg"><TR>
-  <TD><B>Fornite</B>
-  el precio es:
-  <B>15.00</B>
-  ,Valido para :
-  <B>PS4,XBOX,PC</B></TD><TD>
-    .La categoria a la que pertenece es :
-    <B>Entretenimiento</B></TD>
-  <BR>
-  </TR>
-  <img class="flex-container col-md-3 col-sm-3 col-xs-3" src="imagenes/hst.jpeg"><TR>
-  <TD><B>Has sido t&uacute;</B>
-  el precio es:
-  <B>21.40</B>
-  ,Valido para :
-  <B>PS4</B></TD><TD>
-    .La categoria a la que pertenece es :
-    <B>Familiar</B></TD>
-  <BR>
-  </TR>
-  <img class="flex-container col-md-3 col-sm-3 col-xs-3" src="imagenes/minecraft.jpeg"><TR>
-  <TD><B>Minecraft</B>
-  el precio es:
-  <B>23.80</B>
-  ,Valido para :
-  <B>PS4,XBOX</B></TD><TD>
-    .La categoria a la que pertenece es :
-    <B>Arcade</B></TD>
-  <BR>
-  </TR>
-  <img class="flex-container col-md-3 col-sm-3 col-xs-3" src="imagenes/buzz.jpeg"><TR>
-  <TD><B>Buzz</B>
-  el precio es:
-  <B>24.90</B>
-  ,Valido para :
-  <B>PS4,Nintendo</B></TD><TD>
-    .La categoria a la que pertenece es :
-    <B>Familiar</B></TD>
-  <BR>
-  </TR>
-  <img class="flex-container col-md-3 col-sm-3 col-xs-3" src="imagenes/ot.jpeg"><TR>
-  <TD><B>OT 2017</B>
-  el precio es:
-  <B>30.80</B>
-  ,Valido para :
-  <B>PS4,XBOX</B></TD><TD>
-    .La categoria a la que pertenece es :
-    <B>Familiar</B></TD>
-  <BR>
-  </TR>
-  <img class="flex-container col-md-3 col-sm-3 col-xs-3" src="imagenes/gow.jpeg"><TR>
-  <TD><B>God of War</B>
-  el precio es:
-  <B>32.80</B>
-  ,Valido para :
-  <B>PS4,XBOX</B></TD><TD>
-    .La categoria a la que pertenece es :
-    <B>Deporte</B></TD>
-  <BR>
-  </TR>
-  <img class="flex-container col-md-3 col-sm-3 col-xs-3" src="imagenes/pro.jpeg"><TR>
-  <TD><B>Pro evolution soccer</B>
-  el precio es:
-  <B>33.80</B>
-  ,Valido para :
-  <B>PS4,XBOX,PC</B></TD><TD>
-    .La categoria a la que pertenece es :
-    <B>Deporte</B></TD>
-  <BR>
-  </TR>
-  <img class="flex-container col-md-3 col-sm-3 col-xs-3" src="imagenes/f1.jpeg"><TR>
-  <TD><B>Formula 1</B>
-  el precio es:
-  <B>35.89</B>
-  ,Valido para :
-  <B>PS4</B></TD><TD>
-    .La categoria a la que pertenece es :
-    <B>Deporte</B></TD>
-  <BR>
-  </TR>
-  <img class="flex-container col-md-3 col-sm-3 col-xs-3" src="imagenes/cod.jpeg"><TR>
-  <TD><B>Call of Duty</B>
-  el precio es:
-  <B>46.75</B>
-  ,Valido para :
-  <B>PS4,PC,XBOX</B></TD><TD>
-    .La categoria a la que pertenece es :
-    <B>Acci&oacute;n</B></TD>
-  <BR>
-  </TR>
-  <img class="flex-container col-md-3 col-sm-3 col-xs-3" src="imagenes/fifa.jpeg"><TR>
-  <TD><B>Fifa 19</B>
-  el precio es:
-  <B>47.80</B>
-  ,Valido para :
-  <B>PS4,XBOX</B></TD><TD>
-    .La categoria a la que pertenece es :
-    <B>Deporte</B></TD>
-  <BR>
-  </TR>
-  <img class="flex-container col-md-3 col-sm-3 col-xs-3" src="imagenes/coc.jpeg"><TR>
-  <TD><B>Clash of Clan</B>
-  el precio es:
-  <B>5.80</B>
-  ,Valido para :
-  <B>PC</B></TD><TD>
-    .La categoria a la que pertenece es :
-    <B>Estrategia</B></TD>
-  <BR>
-  </TR>
-  </TABLE>
-</main>
-
-<footer>
-  <div class = "container ">
-    <div class = "row">
-      <div class ="col-md-6">
-        <p>Web Internacional Gaming </p>
-      </div>
-      <div class ="col-md-6 col-md-offset-2">
-        <ul class= "list-inline text-right">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">información</a></li>
-          <li><a href="#">Datos</a></li>
-         </ul>
-      </div>
-    </div>
-  </div>
-</footer>
 </body>

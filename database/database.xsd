@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="TIENDA">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="JUEGO" minOccurs='1' maxOccurs='unbounded'/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="JUEGO">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="NOMBRE">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="id" type="xs:integer" use="required"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>   
+            <xs:element name="IMAGEN" type="xs:string"/>
+            <xs:element name="GENERO" type="xs:string"/>
+            <xs:element name="PLATAFORMAS" type="xs:string"/>
+            <xs:element name="PRECIO" type="xs:decimal"/>
+            <xs:element name="FECHA_LANZ" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:element>
+
+
+</xs:schema>
