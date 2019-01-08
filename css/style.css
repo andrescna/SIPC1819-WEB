@@ -4,7 +4,7 @@ html{
   }
 
 main{
-    background-color: rgb(255, 242, 182);
+    background-color: rgb(247, 250, 206);
 }
 
 .navbar{
@@ -18,10 +18,21 @@ main{
     font-size: 25px;
 }
 
+.page-title{
+    font-family: Argentum Sans;
+    color: grey;
+    font-weight: bold;
+    font-size: 35px;
+}
+.page-text{
+    margin-left:10px; 
+    margin-right:5px;
+}
+
+
 .row{
     max-width: 100%;
 }
-
 
 .btn{
     color: #ffffff;

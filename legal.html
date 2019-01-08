@@ -23,156 +23,165 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/font.css" rel="stylesheet" type="text/css">
 
-    <!-- Firebase -->  <!-- TO-DO: HAY QUE VER SI ESTO SE SACA O NO -->
+    <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-    <!--<script>
-    // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyAkuI1DwPN2ys4FkeW-8So1J5iH-Y0NY0A",
-            authDomain: "login-web-c89d9.firebaseapp.com",
-            databaseURL: "https://login-web-c89d9.firebaseio.com",
-            projectId: "login-web-c89d9",
-            storageBucket: "",
-            messagingSenderId: "66433820679"
-        };
-        firebase.initializeApp(config);
-
-        var email= "brianftete@hotmail.com";
-        var password= "Brianftete1998";
-
-        firebase.auth().createUserWithEmailAndPassword(email ,password).catch(function(error) {
-            if (error){
-            alert(error);
-            }else {
-            alert("Tu usuario se ha registrado correctamente");
-            }
-        });
-
-        var email= "brianftete@gmail.com";
-        var password= "ftete98";
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-            if (error){
-            alert(error);
-            }else {
-            alert("Tu usuario ha iniciado sesion correctamente");
-        }
-        });</script>-->
-
+    <script src="js/Firebase.js"></script>
+    
+    <!-- Google analytics, para que pueda tener el codigo de seguimiento-->
+    <script src="js/XMLDisplay.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131821950-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-131821950-1');
+</script>
+    
 </head>
-
-
-<body>
-    <!-- Modal de autenticacion -->     <!-- TO-DO: HAY QUE VER SI ESTO SE SACA O NO -->
-    <div id="login" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Registrese para acceder a las funciones de nuestra app</h4>
-          </div>
-          <div class="modal-body">
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-          </div>
+    
+    
+    <body onload="displayResult()">
+    
+       <!-- Modal de Autenticación  -->
+       <div id="autenticacion" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+      
+              <!-- Contenido del modal de autenticarse-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  
+                  <h4 class="modal-title" style="text-align: center">Regístrate en nuestra web</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Nombre:&nbsp;<input type="text" name="nombre">
+                    <div></div>
+                    Email:&nbsp;<input type="text" name="email" id ="email_r">
+                    <div></div>
+                    Contraseña:&nbsp;<input type ="password" name="secreto" id ="secreto_r">
+                    <div></div>
+                    <input type="submit" value="Enviar" onclick="registrarse()" style="margin-top: 10px">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+      
+            </div>
         </div>
-
-      </div>
-    </div>
-
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
-        <a class="navbar-brand" href="index.html">GameVideo</a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarvideojuegos" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarvideojuegos">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="videojuegos.html">Videojuegos</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Zona de Socios</a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a class="dropdown-item"  data-toggle="modal" data-target="#login">Iniciar sesion</a><li>
-                        <li><a class="dropdown-item" href="registrate.html">Regístrate</a><li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contacto.html">Contacto</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Introduce nombre, tipo, etc..." aria-label="Buscar">
-                <button class="btn btn-outline-success my-2 my-sm-0"  type="submit">Buscar</button>
-            </form>
+    
+        <!-- Modal de Iniciar sesion  -->
+        <div id="login" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+            
+                <!-- Contenido del modal de iniciar sesion-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Inicia sesión para acceder</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                      
+                      Email:<input type="text" name="email" id ="email_s">
+                      <div></div>
+                      Contraseña:<input type ="password" name="secreto" id ="secreto_s">
+                      <div></div>
+                      <input type="submit" onclick="iniciar()" value="Enviar" style="margin-top: 10px">
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+            
+                </div>
         </div>
-        </nav>
+    
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+            <a class="navbar-brand" href="index.html">GameVideo</a>
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarvideojuegos" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarvideojuegos">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="videojuegos.html">Videojuegos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Zona de Socios</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li id="ini" ><a class="dropdown-item"  data-toggle="modal" data-target="#login">Iniciar sesion</a></li>
+                                <li id="aut"><a class="dropdown-item" data-toggle="modal" data-target="#autenticacion">Registrarse</a></li>
+                                <li id="zona"><a class="dropdown-item" onclick="entrar()">Tu perfil</a></li>
+                                <li id="cerrar"><a class="dropdown-item" onclick="fin()">Cerrar sesión</a></li>
+                            </ul>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            </nav>
     </header>
 
     <main>
         <div class="row">
         <div class="col-md-2 col-sm-2"></div>
-        <div class="col-md-8 col-sm-8"> 
+        <div class="col-md-8 col-sm-8 page-text"> 
             
             <div style="text-align: center;">
-                <h1 style="margin-top: 30px; margin-bottom: 20px">Información legal</h1>
+                <h1 class="page-title" style="margin-top: 30px; margin-bottom: 20px">Información legal</h1>
             </div>
 
             <h4>1. DATOS IDENTIFICATIVOS</h4>
-            <p>En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, a continuación se reflejan los siguientes datos: la empresa titular de dominio web es GameVideo S.L. (en adelante GameVideoSL), con número de C.I.F.: B352313134A78. Correo electrónico de contacto: GameVideoSL@gmail.com.</p>
+            <p>En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, a continuación se reflejan los siguientes datos: la empresa titular de dominio web es GameVideo S.L., con número de C.I.F.: B35231313. Correo electrónico de contacto: contacto@gamevideo.com.</p>
 
             <h4>2. USUARIOS</h4>
-            <p>El acceso y/o uso de este portal de GameVideoSL atribuye la condición de USUARIO, que acepta, desde dicho acceso y/o uso, las Condiciones Generales de Uso aquí reflejadas. Las citadas Condiciones serán de aplicación independientemente de las Condiciones Generales de Contratación que en su caso resulten de obligado cumplimiento.</p>
+            <p>El acceso y/o uso de este portal de GameVideo S.L. atribuye la condición de USUARIO, que acepta, desde dicho acceso y/o uso, las Condiciones Generales de Uso aquí reflejadas. Las citadas Condiciones serán de aplicación independientemente de las Condiciones Generales de Contratación que en su caso resulten de obligado cumplimiento.</p>
 
             <h4>3. USO DEL PORTAL</h4>
-            <p>GameVideoSL proporciona el acceso a multitud de informaciones, servicios, programas o datos (en adelante, “los contenidos”) en Internet pertenecientes a GameVideoSL o a sus licenciantes a los que el USUARIO pueda tener acceso. El USUARIO asume la responsabilidad del uso del portal. Dicha responsabilidad se extiende al registro que fuese necesario para acceder a determinados servicios o contenidos.
+            <p>GameVideo S.L. proporciona el acceso a multitud de informaciones, servicios, programas o datos (en adelante, “los contenidos”) en Internet pertenecientes a GameVideo S.L. o a sus licenciantes a los que el USUARIO pueda tener acceso. El USUARIO asume la responsabilidad del uso del portal. Dicha responsabilidad se extiende al registro que fuese necesario para acceder a determinados servicios o contenidos.
             En dicho registro el USUARIO será responsable de aportar información veraz y lícita. Como consecuencia de este registro, al USUARIO se le puede proporcionar una contraseña de la que será responsable,
-            comprometiéndose a hacer un uso diligente y confidencial de la misma. El USUARIO se compromete a hacer un uso adecuado de los contenidos y servicios (como por ejemplo servicios de chat, foros de discusión o grupos de noticias) que Nombre de la empresa creadora del sitio web ofrece a través de su portal y con carácter enunciativo pero no limitativo, a no emplearlos para (i) incurrir en actividades ilícitas, ilegales o contrarias a la buena fe y al orden público; (ii) difundir contenidos o propaganda de carácter racista, xenófobo, pornográfico-ilegal, de apología del terrorismo o atentatorio contra los derechos humanos; (iii) provocar daños en los sistemas físicos y lógicos de Nombre de la empresa creadora del sitio web , de sus proveedores o de terceras personas, introducir o difundir en la red virus informáticos o cualesquiera otros sistemas físicos o lógicos que sean susceptibles de provocar los daños anteriormente mencionados; (iv) intentar acceder y, en su caso, utilizar las cuentas de correo electrónico de otros usuarios y modificaro manipular sus mensajes. Nombre de la empresa creadora del sitio web se reserva el derecho de retirar todos aquellos comentarios y aportaciones que vulneren el respeto a la dignidad de la persona, que sean discriminatorios, xenófobos, racistas, pornográficos, que atenten contra la juventud o la infancia, el orden o la seguridad pública o que, a su juicio, no resultaran adecuados para su publicación. En cualquier caso, GameVideoSL no será responsable de las opiniones vertidas por los usuarios a través de los foros, chats, u otras herramientas de participación.</p>
+            comprometiéndose a hacer un uso diligente y confidencial de la misma. El USUARIO se compromete a hacer un uso adecuado de los contenidos y servicios (como por ejemplo servicios de chat, foros de discusión o grupos de noticias) que Nombre de la empresa creadora del sitio web ofrece a través de su portal y con carácter enunciativo pero no limitativo, a no emplearlos para (i) incurrir en actividades ilícitas, ilegales o contrarias a la buena fe y al orden público; (ii) difundir contenidos o propaganda de carácter racista, xenófobo, pornográfico-ilegal, de apología del terrorismo o atentatorio contra los derechos humanos; (iii) provocar daños en los sistemas físicos y lógicos de Nombre de la empresa creadora del sitio web , de sus proveedores o de terceras personas, introducir o difundir en la red virus informáticos o cualesquiera otros sistemas físicos o lógicos que sean susceptibles de provocar los daños anteriormente mencionados; (iv) intentar acceder y, en su caso, utilizar las cuentas de correo electrónico de otros usuarios y modificaro manipular sus mensajes. Nombre de la empresa creadora del sitio web se reserva el derecho de retirar todos aquellos comentarios y aportaciones que vulneren el respeto a la dignidad de la persona, que sean discriminatorios, xenófobos, racistas, pornográficos, que atenten contra la juventud o la infancia, el orden o la seguridad pública o que, a su juicio, no resultaran adecuados para su publicación. En cualquier caso, GameVideo S.L. no será responsable de las opiniones vertidas por los usuarios a través de los foros, chats, u otras herramientas de participación.</p>
 
             <h4> 4. PROTECCIÓN DE DATOS</h4>
-            <p>GameVideoSL cumple con las directrices de la Ley Orgánica 15/1999 de 13 de diciembre de Protección de Datos de Carácter Personal, el Real Decreto 1720/2007 de 21 de diciembre por el que se aprueba el Reglamento de desarrollo de la Ley Orgánica y demás normativa vigente en cada momento, y vela por garantizar un correcto uso y tratamiento de los datos personales del usuario. Para ello, junto a cada formulario de recabo de datos de carácter personal, en los servicios que el usuario pueda solicitar a GameVideoSL@gmail.com, hará saber al usuario de la existencia y aceptación de las condiciones particulares del tratamiento de sus datos en cada caso, informándole de la responsabilidad del fichero creado, la dirección del responsable, la posibilidad de ejercer sus derechos de acceso, rectificación, cancelación u oposición, la finalidad del tratamiento y las comunicaciones de datos a terceros en su caso.
+            <p>GameVideo S.L. cumple con las directrices de la Ley Orgánica 15/1999 de 13 de diciembre de Protección de Datos de Carácter Personal, el Real Decreto 1720/2007 de 21 de diciembre por el que se aprueba el Reglamento de desarrollo de la Ley Orgánica y demás normativa vigente en cada momento, y vela por garantizar un correcto uso y tratamiento de los datos personales del usuario. Para ello, junto a cada formulario de recabo de datos de carácter personal, en los servicios que el usuario pueda solicitar a GameVideo S.L.@gmail.com, hará saber al usuario de la existencia y aceptación de las condiciones particulares del tratamiento de sus datos en cada caso, informándole de la responsabilidad del fichero creado, la dirección del responsable, la posibilidad de ejercer sus derechos de acceso, rectificación, cancelación u oposición, la finalidad del tratamiento y las comunicaciones de datos a terceros en su caso.
 
-            Asimismo, GameVideoSL informa que da cumplimiento a la Ley 34/2002 de 11 de julio, de Servicios de la Sociedad de la Información y el Comercio Electrónico y le solicitará su consentimiento al tratamiento de su correo electrónico con fines comerciales en cada momento.</p>
+            Asimismo, GameVideo S.L. informa que da cumplimiento a la Ley 34/2002 de 11 de julio, de Servicios de la Sociedad de la Información y el Comercio Electrónico y le solicitará su consentimiento al tratamiento de su correo electrónico con fines comerciales en cada momento.</p>
 
             <h4>5. EXCLUSIÓN DE GARANTÍAS Y RESPONSABILIDAD</h4>
-            <p>GameVideoSL no se hace responsable, en ningún caso, de los daños y perjuicios de cualquier naturaleza que pudieran ocasionar, a título enunciativo: errores u omisiones en los contenidos, falta de disponibilidad del portal o la transmisión de virus o programas maliciosos o lesivos en los contenidos, a pesar de haber adoptado todas las medidas tecnológicas necesarias para evitarlo.</p>
+            <p>GameVideo S.L. no se hace responsable, en ningún caso, de los daños y perjuicios de cualquier naturaleza que pudieran ocasionar, a título enunciativo: errores u omisiones en los contenidos, falta de disponibilidad del portal o la transmisión de virus o programas maliciosos o lesivos en los contenidos, a pesar de haber adoptado todas las medidas tecnológicas necesarias para evitarlo.</p>
 
             <h4>6. MODIFICACIONES</h4>
-            <p>GameVideoSL se reserva el derecho de efectuar sin previo aviso las modificaciones que considere oportunas en su portal, pudiendocambiar, suprimir o añadir tanto los contenidos y servicios que se presten a través de la misma como la forma en la que éstos aparezcan presentados o localizados en su portal.</p>
+            <p>GameVideo S.L. se reserva el derecho de efectuar sin previo aviso las modificaciones que considere oportunas en su portal, pudiendocambiar, suprimir o añadir tanto los contenidos y servicios que se presten a través de la misma como la forma en la que éstos aparezcan presentados o localizados en su portal.</p>
 
             <h4>7. ENLACES</h4>
-            <p>En el caso de que en GameVideoSL se dispusiesen enlaces o hipervínculos hacía otros sitios de Internet, GameVideoSL no ejercerá ningún tipo de control sobre dichos sitios y contenidos. En ningún caso
-            GameVideoSL asumirá responsabilidad alguna por los contenidos de algún enlace perteneciente a un sitio web ajeno, ni garantizará la disponibilidad técnica, calidad, fiabilidad, exactitud, amplitud, veracidad, validez y
+            <p>En el caso de que en GameVideo S.L. se dispusiesen enlaces o hipervínculos hacía otros sitios de Internet, GameVideo S.L. no ejercerá ningún tipo de control sobre dichos sitios y contenidos. En ningún caso
+            GameVideo S.L. asumirá responsabilidad alguna por los contenidos de algún enlace perteneciente a un sitio web ajeno, ni garantizará la disponibilidad técnica, calidad, fiabilidad, exactitud, amplitud, veracidad, validez y
             constitucionalidad de cualquier material o información contenida en ninguno de dichos hipervínculos u otros sitios de Internet.
 
             Igualmente la inclusión de estas conexiones externas no implicará ningún tipo de asociación, fusión o participación con las entidades conectadas.</p>
 
             <h4>8. DERECHO DE EXCLUSIÓN</h4>
-            <p>GameVideoSL se reserva el derecho a denegar o retirar el acceso a portal y/o los servicios ofrecidos sin necesidad de preaviso, a instancia propia o de un tercero, a aquellos usuarios que incumplan las presentes Condiciones Generales de Uso.</p>
+            <p>GameVideo S.L. se reserva el derecho a denegar o retirar el acceso a portal y/o los servicios ofrecidos sin necesidad de preaviso, a instancia propia o de un tercero, a aquellos usuarios que incumplan las presentes Condiciones Generales de Uso.</p>
 
             <h4>9. GENERALIDADES</h4>
-            <p>GameVideoSL perseguirá el incumplimiento de las presentes condiciones así como cualquier utilización indebida de su portal ejerciendo todas las acciones civiles y penales que le puedan corresponder en derecho.</p>
+            <p>GameVideo S.L. perseguirá el incumplimiento de las presentes condiciones así como cualquier utilización indebida de su portal ejerciendo todas las acciones civiles y penales que le puedan corresponder en derecho.</p>
 
             <h4>10. MODIFICACIÓN DE LAS PRESENTES CONDICIONES Y DURACIÓN</h4>
-            <p>GameVideoSL podrá modificar en cualquier momento las condiciones aquí determinadas, siendo debidamente publicadas como aquí aparecen.<br> <br>
+            <p>GameVideo S.L. podrá modificar en cualquier momento las condiciones aquí determinadas, siendo debidamente publicadas como aquí aparecen.<br> <br>
 
             La vigencia de las citadas condiciones irá en función de su exposición y estarán vigentes hasta debidamente publicadas. que sean modificadas por otras.</p>
 
             <h4>11. LEGISLACIÓN APLICABLE Y JURISDICCIÓN</h4>
-            <p>La relación entre GameVideoSL y el USUARIO se regirá por la normativa española vigente y cualquier controversia se someterá a los Juzgados y tribunales de la ciudad de Tenerife.<br><br>
-
-            Aviso Legal redactado siguiendo el: Modelo de Aviso Legal web de España
-            <br>
-            <br>
+            <p>La relación entre GameVideo S.L. y el USUARIO se regirá por la normativa española vigente y cualquier controversia se someterá a los Juzgados y tribunales de la ciudad de Tenerife.<br><br>
         </div>
 
         <div class="col-md-2 col-sm-2"></div>
@@ -194,16 +203,16 @@
             </div>
             <div class="col-md-3 col-sm-3 main-footer-container">
                 <ul class="my-footer-links">
-                    <li class="title">Servicios</li><li class="service-link"><a href="videojuegos.html">Videojuegos</a></li><li class="service-link"><a href="socios.html">Zona Socios</a></li><li class="service-link"><a href="contacto.html">Contacto</a></li></ul>
+                        <li class="title">Servicios</li><li class="service-link"><a href="videojuegos.html">Videojuegos</a><li class="service-link"><a href="contacto.html">Contacto</a></li></ul>
                     </div>
             <div class="col-md-4 col-sm-4 main-footer-container social">
                 <li class="title">Síguenos</li>
 
-                <a target="_blank" href="https://www.facebook.com/GameVideoSL" class="link-fb">
+                <a target="_blank" href="https://www.facebook.com/GameVideo S.L." class="link-fb">
                     <i class="fa fa-facebook">
                     </i>
                 </a>
-                <a target="_blank" href="https://twitter.com/gamevideoSL" class="link-tw">
+                <a target="_blank" href="https://twitter.com/GameVideo S.L." class="link-tw">
                     <i class="fa fa-twitter">
                     </i>
                 </a>
@@ -220,7 +229,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 mycopyright">© 2019 GameVideo S.L.&nbsp;<a target="blank" href="legal.html">Política de privacidad</a></div>
+            <div class="col-md-12 mycopyright">© 2019 GameVideo S.L.&nbsp;<a href="legal.html">Política de privacidad</a></div>
         </div>
     </div>
 

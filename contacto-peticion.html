@@ -23,24 +23,24 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/font.css" rel="stylesheet" type="text/css">
 
-        <!-- Firebase -->
-        <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-        <script src="js/Firebase.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script src="js/Firebase.js"></script>
     
-        <!-- Google analytics, para que pueda tener el codigo de seguimiento-->
-        <script src="js/XMLDisplay.js"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131821950-1"></script>
-            <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-131821950-1');
+    <!-- Google analytics, para que pueda tener el codigo de seguimiento-->
+    <script src="js/XMLDisplay.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131821950-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-131821950-1');
 </script>
     
 </head>
     
-    <body>
     
+<body>  
     <!-- Modal de Autenticación  -->
     <div id="autenticacion" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -93,7 +93,8 @@
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
               </div>
             </div>
-        </div>
+        
+            </div>
     </div>
     
         <header>
@@ -131,29 +132,19 @@
 
     <main>
     
-            <div class="row" style="padding-bottom: 200px">
-                    <div class="col-md-2 col-sm-2"></div>
-                    <div class="col-md-8 col-sm-8"> 
-                        <h1 class="page-title page-text" style="margin-top: 30px; margin-bottom: 20px; text-align: center">Soporte</h1>
-                        <p class="page-text">¿Necesitas ayuda? Deja tus datos y contactaremos contigo lo más pronto posible:</p>
+        <div class="row" style="padding-bottom: 600px">
+            <div class="col-md-2 col-sm-2"></div>
+            <div class="col-md-8 col-sm-8"> 
+                <h1 class="page-title page-text" style="margin-top: 30px; margin-bottom: 20px; text-align: center">Soporte</h1>
+                <p class="page-text" style="text-align: center">Gracias. Nos pondremos en contacto contigo lo antes posible.</p>
+                <button class="btn my-2 my-sm-0" onclick="window.location.href='index.html'" style="margin:auto; display:block; text-align:center">Volver a Inicio</button>
+            </div>
+            <div class="col-md-2 col-sm-2"></div>
+        </div>
 
-                        <form class="contacto" style="margin-left: 10px" action="contacto-peticion.html">
-                            <h5>Nombre</h5>
-                            <input type="text" name="nombre" stlye="margin-left: 10px" required>
+    </main>
 
-                            <h5 style="margin-top:10px">Email de contacto</h5>
-                            <input type="email" name="email" required>
-
-                            <h5 style="margin-top:10px">¿En qué podemos ayudarte?</h5>
-                            <textarea type="text" name="problema" rows="6" cols="45" required></textarea><br>
-
-                            <input type="submit" value="Enviar" style="margin-top: 10px; margin-bottom: 30px">
-                        </form>
-                    </div>
-
-                    <div class="col-md-2 col-sm-2"></div>   
-                </main>
-        <footer class="main-footer">
+    <footer class="main-footer main-footer-fixed">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-sm-4 main-footer-container">
@@ -199,6 +190,7 @@
                 </div>
             </div>
         
-        </footer>
+            </footer>
+
 </body>
 </html>

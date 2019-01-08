@@ -7,7 +7,7 @@
     <JUEGO>
         <NOMBRE id="01">Fifa 19</NOMBRE>
         <IMAGEN>img/games/01.jpg</IMAGEN>
-        <GENERO>Deporte</GENERO>
+        <GENERO>Deportes</GENERO>
         <PLATAFORMAS>PS4, XBOX</PLATAFORMAS>
         <PRECIO>47.80</PRECIO>
         <FECHA_LANZ>Ya disponible</FECHA_LANZ>
@@ -25,7 +25,7 @@
     <JUEGO>
         <NOMBRE id="03">F1 2018</NOMBRE>
         <IMAGEN>img/games/03.jpg</IMAGEN>
-        <GENERO>Deporte</GENERO>
+        <GENERO>Conducción</GENERO>
         <PLATAFORMAS>PS4</PLATAFORMAS>
         <PRECIO>35.89</PRECIO>
         <FECHA_LANZ>Ya disponible</FECHA_LANZ>
@@ -35,7 +35,7 @@
         <NOMBRE id="04">Call of Duty Black Ops 4</NOMBRE>
         <IMAGEN>img/games/04.jpg</IMAGEN>
         <GENERO>Acción</GENERO>
-        <PLATAFORMAS>PS4,PC,XBOX</PLATAFORMAS>
+        <PLATAFORMAS>PS4, PC, XBOX</PLATAFORMAS>
         <PRECIO>46.75</PRECIO>
         <FECHA_LANZ>Ya disponible</FECHA_LANZ>
     </JUEGO>
@@ -52,7 +52,7 @@
     <JUEGO>
         <NOMBRE id="06">Minecraft</NOMBRE>
         <IMAGEN>img/games/06.jpg</IMAGEN>
-        <GENERO>Arcade</GENERO>
+        <GENERO>Simulación</GENERO>
         <PLATAFORMAS>PS4, XBOX</PLATAFORMAS>
         <PRECIO>23.80</PRECIO>
         <FECHA_LANZ>12/3/2019</FECHA_LANZ>
@@ -61,7 +61,7 @@
     <JUEGO>
         <NOMBRE id="07">PES 2019</NOMBRE>
         <IMAGEN>img/games/07.jpg</IMAGEN>
-        <GENERO>Deporte</GENERO>
+        <GENERO>Deportes</GENERO>
         <PLATAFORMAS>PS4, XBOX, PC</PLATAFORMAS>
         <PRECIO>33.80</PRECIO>
         <FECHA_LANZ>Ya disponible</FECHA_LANZ>
@@ -98,7 +98,7 @@
         <NOMBRE id="11">OT 2017</NOMBRE>
         <IMAGEN>img/games/11.jpg</IMAGEN>
         <GENERO>Familiar</GENERO>
-        <PLATAFORMAS>PS4,XBOX</PLATAFORMAS>
+        <PLATAFORMAS>PS4, XBOX</PLATAFORMAS>
         <PRECIO>30.80</PRECIO>
         <FECHA_LANZ>Ya disponible</FECHA_LANZ>
     </JUEGO>
@@ -106,7 +106,7 @@
     <JUEGO>
         <NOMBRE id="12">God of War</NOMBRE>
         <IMAGEN>img/games/12.jpg</IMAGEN>
-        <GENERO>Deporte</GENERO>
+        <GENERO>Acción</GENERO>
         <PLATAFORMAS>PS4,XBOX</PLATAFORMAS>
         <PRECIO>32.80</PRECIO>
         <FECHA_LANZ>14/3/2019</FECHA_LANZ>
